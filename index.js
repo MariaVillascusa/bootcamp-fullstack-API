@@ -57,6 +57,19 @@ app.post('/api/persons', (request, response) => {
     const body = request.body
     const generateId = () => Math.floor(Math.random() * 100000)
 
+    if (!body.name || !body.number) {
+        return response.status(400).json({ 
+          error: 'content missing' 
+        })
+      }
+
+    persons.map(person => { 
+        if(person.name === body.name){
+            return response.status(409).json({ 
+                error: 'name must be unique' 
+        })}
+    })
+   
     person = {
         name: body.name,
         number: body.number,
