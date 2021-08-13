@@ -1,6 +1,7 @@
 const { request, response } = require('express')
 const express = require('express')
 const app = express()
+const morgan = require('morgan')
 
 let persons = [
     {
@@ -52,6 +53,8 @@ app.delete('/api/persons/:id', (request, response) => {
 })
 
 app.use(express.json())
+app.use(morgan('tiny'))
+
 
 app.post('/api/persons', (request, response) => {
     const body = request.body
