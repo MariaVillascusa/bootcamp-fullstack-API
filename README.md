@@ -7,7 +7,7 @@ APPLICATION INFO:
 https://mysterious-atoll-39806.herokuapp.com/info
 
 
-All people breakpoint:
+All people endpoint:
 
 https://mysterious-atoll-39806.herokuapp.com/api/persons
 
