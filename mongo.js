@@ -27,10 +27,9 @@ const Person = model('Person', personSchema)
 if (process.argv[3] === undefined) {
     Person.find({})
         .then(result => {
-            console.log("Phonebook:");
-            result.map(person => {
-                console.log(`${person.name} ${person.number}`)
-            })
+            console.log('Phonebook:')
+            result.map(person => console.log(`${person.name} ${person.number}`)
+            )
             mongoose.connection.close()
         })
 } else {
