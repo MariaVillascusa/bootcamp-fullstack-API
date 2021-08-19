@@ -1,14 +1,14 @@
 
-GET https://mysterious-atoll-39806.herokuapp.com/api/persons
+GET http://localhost:3001/api/persons
 ###
 
 GET https://mysterious-atoll-39806.herokuapp.com/info
 ###
 
-DELETE https://mysterious-atoll-39806.herokuapp.com/api/persons/3
+DELETE http://localhost:3001/api/persons/3
 ###
 
-POST https://mysterious-atoll-39806.herokuapp.com/api/persons
+POST http://localhost:3001/api/persons
 content-type: application/json
 
 {
