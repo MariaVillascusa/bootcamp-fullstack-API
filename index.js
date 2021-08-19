@@ -64,7 +64,7 @@ app.post('/api/persons', (request, response) => {
     })
     person.save().then(savedPerson => {
         response.json(savedPerson)
-    })
+    }).catch(error => console.log(error))
 })
 
 app.use(unknownEndpoint)
